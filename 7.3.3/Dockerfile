@@ -45,6 +45,7 @@ VOLUME ["/var/atlassian/jira", "/opt/atlassian/jira/logs"]
 WORKDIR /var/atlassian/jira
 
 COPY "docker-entrypoint.sh" "/"
+RUN chmod 700 "/docker-entrypoint.sh"
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # hack
