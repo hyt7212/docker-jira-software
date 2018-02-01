@@ -1,7 +1,7 @@
-JIRA-software 7.2.7 for docker
+JIRA-software 7.7.1 for docker
 ===
-+ jira7.2.7
-+ mysql <= 5.6
++ jira7.7.1
++ mysql >= 5.7(jira7.2版本需要mysql <= 5.6)
 
 docker-compose.yml
 ```yml
@@ -9,7 +9,7 @@ version: '2'
 services:
   jira:
     restart: always
-    image: hyt7212/docker-jira-software:7.2.7
+    image: ikerlin/docker-jira-software:7.7.1
     ports:
       - 8080:8080
     volumes: 
@@ -20,7 +20,7 @@ services:
       - jira_mysql
   jira_mysql:
       restart: always
-      image: mysql:5.6
+      image: mysql:5.7
       ports:
         - "3307:3306"
       volumes:
