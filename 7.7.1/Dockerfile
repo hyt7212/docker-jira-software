@@ -44,6 +44,7 @@ RUN chmod 700 "/docker-entrypoint.sh"
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # hack
+COPY "atlassian-universal-plugin-manager-plugin-2.22.5.jar" "${JIRA_INSTALL}/atlassian-jira/WEB-INF/atlassian-bundled-plugins/"
 COPY "atlassian-extras-3.2.jar" "${JIRA_INSTALL}/atlassian-jira/WEB-INF/lib/"
 
 # Run Atlassian JIRA as a foreground process by default.
