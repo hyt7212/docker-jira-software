@@ -44,7 +44,7 @@ RUN chmod 700 "/docker-entrypoint.sh"
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # hack
-# COPY "atlassian-extras-3.2.jar" "/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/"
+COPY "atlassian-extras-3.2.jar" "${JIRA_INSTALL}/atlassian-jira/WEB-INF/lib/"
 
 # Run Atlassian JIRA as a foreground process by default.
 CMD ["/opt/atlassian/jira/bin/catalina.sh", "run"]
