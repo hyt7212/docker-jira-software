@@ -9,7 +9,7 @@ version: '2'
 services:
   jira:
     restart: always
-    image: ikerlin/docker-jira-software:7.7.1
+    image: ikerlin/jira-software:7.7.1
     ports:
       - 8080:8080
     volumes: 
